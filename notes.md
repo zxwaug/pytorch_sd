@@ -107,8 +107,11 @@ Computer-Assisted Intervention – MICCAI 2015; Navab, N., Hornegger, J., Wells,
 W.M., Frangi, A.F., Eds.; Springer International Publishing: Cham, 2015; pp.
 234–241.
 
+![Algorithm 2](./tex/algorithm_02_pseudocode.png)
+
 ### Latent Diffusion Model
 
 reference 3
 
 > Rombach, R.; Blattmann, A.; Lorenz, D.; Esser, P.; Ommer, B. High-Resolution Image Synthesis with Latent Diffusion Models 2022.
+

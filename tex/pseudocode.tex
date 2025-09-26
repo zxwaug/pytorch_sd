@@ -18,7 +18,19 @@
             \[
             \nabla_{\theta} \left\| \boldsymbol{\epsilon} - \boldsymbol{\epsilon}_{\theta} \left( \sqrt{\bar{\alpha}_t} \mathbf{x}_0 + \sqrt{1 - \bar{\alpha}_t} \boldsymbol{\epsilon}, t \right) \right\|^2
             \]
-            \UNTIL{converged}
+        \UNTIL{converged}
+    \end{algorithmic}
+    \end{algorithm}
+
+    \begin{algorithm}[H]
+    \caption{Sampling}
+    \begin{algorithmic}[1]
+        \STATE $ \mathbf{x}_t \sim \mathcal{N}(\mathbf{0}, \mathbf{I}) $
+        \STATE $ \text{\textbf{for}}  \quad  t=T, ..., 1 \quad  \text{\textbf{do}} \quad  $
+        \STATE $ \qquad \mathbf{z} \sim \mathcal{N}(\mathbf{0}, \mathbf{I}) \quad if \  t > 1, \  else \  \mathbf{z}=\mathbf{0} $
+        \STATE $ \qquad \mathbf{x}_{t-1} = \frac{1}{\sqrt{\alpha_t}} \left( \mathbf{x}_t - \frac{1-\alpha_t}{\sqrt{1-\alpha_t}} \bm{\epsilon}_\theta(\mathbf{x}_t, t) \right) + \sigma_t\mathbf{z} $
+        \STATE $ \text{\textbf{end for}} $
+        \STATE $ \text{\textbf{return}} \  \mathbf{x}_0 $
     \end{algorithmic}
     \end{algorithm}
 
