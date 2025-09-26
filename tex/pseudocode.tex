@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{lipsum}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{amsmath}
+\usepackage{bm}
+
+\begin{document}
+
+    \begin{algorithm}[H]
+    \caption{Training}
+    \begin{algorithmic}[1]
+        \REPEAT
+            \STATE $ \mathbf{x}_0 \sim q(\mathbf{x}_0) $
+            \STATE $ t \sim \text{Uniform}(\{1, \dots, T\}) $
+            \STATE $ \boldsymbol{\epsilon} \sim \mathcal{N}(\mathbf{0}, \mathbf{I}) $
+            \STATE Take gradient descent step on
+            \[
+            \nabla_{\theta} \left\| \boldsymbol{\epsilon} - \boldsymbol{\epsilon}_{\theta} \left( \sqrt{\bar{\alpha}_t} \mathbf{x}_0 + \sqrt{1 - \bar{\alpha}_t} \boldsymbol{\epsilon}, t \right) \right\|^2
+            \]
+            \UNTIL{converged}
+    \end{algorithmic}
+    \end{algorithm}
+
+\end{document}
