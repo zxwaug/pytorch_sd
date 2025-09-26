@@ -2,3 +2,4 @@
 .vscode
 .buddy
 tex/*.gz
+tex/*.pdf
